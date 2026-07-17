@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*
+
+# Vercel CLI local env (OIDC token) - never commit
+.env.local
