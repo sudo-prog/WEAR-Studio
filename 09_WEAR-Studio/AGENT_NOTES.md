@@ -1,6 +1,6 @@
 # Agent Notes — VVARDROBE (WEAR_STUDIO)
-**Last updated:** 2026-06-22
-**Status:** Early build — UI components + Gemini integration, no backend
+**Last updated:** 2026-06-24
+**Status:** Code pushed to GitHub (`sudo-prog/WEAR-Studio`, branch: master). React 19 ESM interop fixed. Builds successfully.
 
 ---
 
@@ -119,3 +119,8 @@ AI virtual wardrobe / outfit try-on app. Upload a photo of yourself and an outfi
 | `components/PosePanel.tsx` | Pose controls |
 | `wardrobe.ts` | Wardrobe data model |
 | `types.ts` | TypeScript type definitions |
+
+## Mobile UI Compliance (MOBILE-UI-STANDARD.md)
+- **Status:** CODE FIX PUSHED (master b43b8ae) — NOT deployed: wear-studio.vercel.app is a different team's Nomo Stage app; deploy FLAGGED pending decision
+- **Verified:** 2026-07-17 via /tmp/mobile_audit.mjs @390x844 (tap-target >=44px T-1, overflow, safe-area, console errors)
+- **T-1 fix:** enforce 44x44px on touch/coarse + <=767px; backend API queries gated behind DEV||VITE_API_ENABLED to silence 404s on static Vercel deploy.
